@@ -2,204 +2,334 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#070a0d">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#070d0a">
     <meta name="description" content="Portafolio de desarrollador de software.">
     <title>Mi Portafolio | Samuel</title>
+    <link rel="icon" href="css/icon/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="wordmark" href="#inicio" aria-label="Ir al inicio">Samuel S<span>.</span></a>
-      <nav class="site-nav" aria-label="Navegación principal">
+    <!-- CABECERA -->
+    <header class="cabecera-sitio">
+      <a class="marca" href="#inicio" aria-label="Ir al inicio">
+        <img src="css/icon/logo.png" alt="Logo" class="logo-brand">  
+      </a>
+      <button class="boton-menu" type="button" aria-label="Abrir menú de navegación" aria-controls="navegacion-principal" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="navegacion-sitio" id="navegacion-principal" aria-label="Navegación principal">
         <a href="#proyectos">Proyectos</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#stack">Stack</a>
-        <a class="nav-contact" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+        <a class="enlace-contacto" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main>
-      <section class="hero page-width" id="inicio" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">Hola, soy<br><span class="accent-text">Samuel</span><span class="period">.</span></h1>
-          <p class="hero-role">Desarrollador de software</p>
-          <p class="hero-description">Diseño y construyo soluciones digitales útiles que solucionen problemas reales de forma efectiva y eficiente.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#contacto">Contactar <span aria-hidden="true">↗</span></a>
+      <!-- HERO / SECCIÓN PRINCIPAL -->
+      <section class="hero ancho-pagina" id="inicio" aria-labelledby="hero-titulo">
+        <div class="hero-contenido">
+          <p class="etiqueta-superior">FREELANCER</p>
+          <h1 id="hero-titulo">PORTAFOLIO</h1>
+          <div class="hero-subtitulo-linea">
+            <span class="acento-verde">UI / UX / WEB / SOFTWARE</span>
           </div>
-          <p class="hero-location"><span aria-hidden="true">⌖</span> Trujillo, Venezuela </p>
+          <p class="hero-descripcion">Diseño y construyo soluciones digitales útiles que solucionen problemas reales de forma efectiva y eficiente.</p>
+          
+          <!--
+            
+          <div class="hero-metricas">
+            <div class="metrica-item">
+              <span class="metrica-numero">4+</span>
+              <span class="metrica-texto">AÑOS DE EXPERIENCIA</span>
+            </div>
+            
+            <div class="metrica-item">
+              <span class="metrica-numero">28+</span>
+              <span class="metrica-texto">PROYECTOS COMPLETADOS</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-numero">12+</span>
+              <span class="metrica-texto">CLIENTES FELICES</span>
+            </div>
+          </div>
+          
+          -->
+
+          <div class="hero-acciones">
+            <a class="boton boton-primario" href="#proyectos">Ver proyectos
+              <span aria-hidden="true">↓</span></a>
+            <a class="enlace-texto" href="#contacto">Contactar
+              <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path>
+              </svg>
+            </a>
+          </div>
+          <p class="hero-ubicacion">
+            <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path>
+            </svg>
+            Trujillo, Venezuela 
+          </p>
         </div>
 
-        <div class="portrait-slot" role="img" aria-label="Espacio reservado para tu foto de perfil">
-          <div class="portrait-frame">
-            <img src="css/img/imagen-perfil.jpeg" alt="Foto de perfil de Samuel" class="portrait-image">
+        <div class="contenedor-perfil" role="img" aria-label="Espacio reservado para tu foto de perfil pequeña">
+          <div class="marco-perfil">
+            <!-- COMENTARIO: Sustituye la ruta de la imagen 'css/img/imagen-perfil.jpeg' por tu foto de perfil real (recuerda mantenerla en un tamaño reducido según el CSS) -->
+            <img src="css/icon/perfil-icon.png" alt="Foto de perfil de Samuel" class="imagen-perfil">
           </div>
-          <span class="portrait-orbit orbit-one"></span>
-          <span class="portrait-orbit orbit-two"></span>
         </div>
-        <span class="hero-index mono">PORTAFOLIO - 2026</span>
+        <span class="hero-indice mono">PORTAFOLIO - 2026</span>
       </section>
 
-      <section class="projects section page-width" id="proyectos" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 / TRABAJO SELECCIONADO</p>
-            <h2 id="projects-title">Proyectos<span class="period">.</span></h2>
+      <!-- LO QUE HAGO / SERVICIOS (Inspirado en la referencia japonesa) -->
+      <section class="seccion-servicios ancho-pagina" aria-labelledby="servicios-titulo">
+        <p class="etiqueta-superior">LO QUE HAGO</p>
+        <div class="rejilla-servicios">
+          <div class="tarjeta-servicio">
+            <span class="servicio-icono">✦</span>
+            <h3>DISEÑO UI / UX</h3>
+            <p>Diseño interfaces que mejoren la fluidez y la experiencia del usuario.</p>
           </div>
-          <p class="section-note">Proyectos que he realizado y sus detalles, códigos y stack utilizado.</p>
+          <div class="tarjeta-servicio">
+            <span class="servicio-icono">✦</span>
+            <h3>DISEÑO WEB</h3>
+            <p>Construyo sitios web a la medida, modernos, responsivos y de alto rendimiento.</p>
+          </div>
+          <div class="tarjeta-servicio">
+            <span class="servicio-icono">✦</span>
+            <h3>DESARROLLO DE APLICACIONES</h3>
+            <p>Construyo apps modernas y funcionales a la medida en diversas plataformas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS / TRABAJO SELECCIONADO -->
+      <section class="proyectos seccion ancho-pagina" id="proyectos" aria-labelledby="proyectos-titulo">
+        <div class="cabecera-seccion">
+          <div>
+            <p class="etiqueta-superior">TRABAJO SELECCIONADO</p>
+            <h2 id="proyectos-titulo">Proyectos destacados<span class="punto">.</span></h2>
+          </div>
+          <p class="nota-seccion">Proyectos que he realizado y sus detalles, códigos y stack utilizado.</p>
         </div>
 
-        <div class="project-list">
-          <article class="project-card" id="proyecto-1">
-            <div class="project-visual visual-dashboard" aria-hidden="true">
-              <span class="visual-label mono">PROYECTO / 01</span>
-              <div class="dashboard-window">
-                <div class="window-bar"><i></i><i></i><i></i><span>tu-proyecto.dev</span></div>
-                <div class="window-content">
-                  <div class="window-sidebar"></div>
-                  <div class="window-main"><b></b><b></b><b></b><div class="chart-lines"></div></div>
-                </div>
-              </div>
-              <span class="visual-cross">+</span>
+        <!-- CONTENEDOR DE PROYECTOS -->
+        <div class="lista-proyectos">
+          
+          <!-- BLOQUE DE PROYECTO 1 (Duplicable) -->
+          <article class="tarjeta-proyecto" id="proyecto-1">
+            <div class="proyecto-visual visual-panel" aria-hidden="true">
+              <span class="etiqueta-visual mono">PROYECTO / 01</span>
+              <img src="css/img/proyecto-uno.png" alt="Proyecto 1" class="imagen-proyecto">
             </div>
-            <div class="project-info">
-              <div class="project-title-line"><h3>SaaS de administración de ventas.</h3><span class="project-number mono">01</span></div>
+            <div class="proyecto-info">
+              <div class="linea-titulo-proyecto"><h3>SaaS de administración de ventas.</h3><span class="numero-proyecto mono">01</span></div>
               <p>Panel administrativo que permite monitorear ventas, ganancias, clientes y deudas para maximizar las ganancias.</p>
-              <p class="project-impact"><span>IMPACTO</span> [Añade un resultado medible o aprendizaje.]</p>
-              <div class="project-bottom">
-                <ul class="tag-list" aria-label="Tecnologías utilizadas">
+              <!--
+                <p class="impacto-proyecto"><span>IMPACTO</span> [Añade un resultado medible o aprendizaje.]</p>
+              -->
+              <div class="proyecto-pie">
+                <ul class="lista-etiquetas" aria-label="Tecnologías utilizadas">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JAVASCRIPT</li>
                     <li>TYPESCRIPT</li>
                     <li>FIREBASE</li>
                 </ul>
-                <div class="project-links">
-                    <a href="#proyecto-1" aria-label="Añadir enlace a la demo del proyecto 1">Demo <span>↗</span></a>
-                    <a href="#proyecto-1" aria-label="Añadir enlace al código del proyecto 1">Código <span>↗</span></a>
+                <div class="enlaces-proyecto">
+                    <a href="#proyecto-1" aria-label="Enlace al código del proyecto 1">Código <span>↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- FIN DEL BLOQUE DE PROYECTO 1 -->
+
+          <article class="tarjeta-proyecto" id="proyecto-2">
+            <div class="proyecto-visual visual-panel" aria-hidden="true">
+              <span class="etiqueta-visual mono">PROYECTO / 02</span>
+              <img src="css/img/proyecto-dos.jpg" alt="Proyecto 2" class="imagen-proyecto">
+            </div>
+            <div class="proyecto-info"> 
+              <div class="linea-titulo-proyecto"><h3>Página web Panificadora Pacho's.</h3><span class="numero-proyecto mono">02</span></div>
+              <p>Sitio Web para panadería donde se muestran sus productos, precios, ubicación y más información.</p>
+              
+              <!--
+                <p class="impacto-proyecto"><span>IMPACTO</span> [Añade un resultado medible o aprendizaje.]</p>
+              -->
+              <div class="proyecto-pie">
+                <ul class="lista-etiquetas" aria-label="Tecnologías utilizadas">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>TYPESCRIPT</li>
+                    <li>FIREBASE</li>
+                </ul>
+                <div class="enlaces-proyecto">
+                    <a href="https://panificadora-pachos.web.app" aria-label="Enlace a la demo del proyecto 2">Visitar <span>↗</span></a>
+                    <a href="#proyecto-2" aria-label="Enlace al código del proyecto 2">Ver Código <span>↗</span></a>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="project-card" id="proyecto-2">
-            <div class="project-visual visual-code" aria-hidden="true">
-              <span class="visual-label mono">PROYECTO / 02</span>
-              <div class="code-window">
-                <div class="code-top"><span></span><span></span><span></span><b>main.ts</b></div>
-                <div class="code-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="code-cursor"></div>
-              </div>
-              <span class="code-symbol mono">&lt;/&gt;</span>
+          <article class="tarjeta-proyecto" id="proyecto-3">
+            <div class="proyecto-visual visual-panel" aria-hidden="true">
+              <span class="etiqueta-visual mono">PROYECTO / 03</span>
+              <img src="css/img/proyecto-tres.jpg" alt="Proyecto 3" class="imagen-proyecto">
             </div>
-            <div class="project-info">
-              <div class="project-title-line"><h3>Sistema POS (Punto De Venta) en línea.</h3><span class="project-number mono">02</span></div>
-              <p>Sistema POS clásico de supermecado, fácil e intuitivo de usar, con implemetaciones para el monitoreo de ventas y ganancias en vivo.</p>
-              <p class="project-impact"><span>IMPACTO</span> [Añade un resultado medible o aprendizaje.]</p>
-              <div class="project-bottom">
-                <ul class="tag-list" aria-label="Tecnologías utilizadas">
+            <div class="proyecto-info">
+              <div class="linea-titulo-proyecto"><h3>Sistema POS (Punto De Venta) en línea.</h3><span class="numero-proyecto mono">03</span></div>
+              <p>Sistema POS clásico de supermercado, fácil e intuitivo de usar, con implementaciones para el monitoreo de ventas y ganancias en vivo.</p>
+              
+              <!--
+                <p class="impacto-proyecto"><span>IMPACTO</span> [Añade un resultado medible o aprendizaje.]</p>
+              -->
+                <ul class="lista-etiquetas" aria-label="Tecnologías utilizadas">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JAVASCRIPT</li>
                     <li>TYPESCRIPT</li>
                     <li>FIREBASE</li>
                 </ul>
-                <div class="project-links"><a href="#proyecto-2" aria-label="Añadir enlace a la demo del proyecto 2">Demo <span>↗</span></a><a href="#proyecto-2" aria-label="Añadir enlace al código del proyecto 2">Código <span>↗</span></a></div>
+                <div class="enlaces-proyecto">
+                  <a href="#proyecto-3" aria-label="Enlace al código del proyecto 3">Código <span>↗</span></a>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="project-card" id="proyecto-3">
-            <div class="project-visual visual-mobile" aria-hidden="true">
-              <span class="visual-label mono">PROYECTO / 03</span>
-              <div class="mobile-device"><div class="mobile-speaker"></div><div class="mobile-screen"><span></span><b></b><i></i><i></i><i></i><strong></strong></div></div>
-              <span class="mobile-glow"></span>
+          <article class="tarjeta-proyecto" id="proyecto-4">
+            <div class="proyecto-visual visual-panel" aria-hidden="true">
+              <span class="etiqueta-visual mono">PROYECTO / 04</span>
+              <img src="css/img/proyecto-cuatro.jpg" alt="Proyecto 4" class="imagen-proyecto">
             </div>
-            <div class="project-info">
-              <div class="project-title-line"><h3>Stitch -  Descargador de multimedia. (Versión Beta)</h3><span class="project-number mono">03</span></div>
-              <p>Stitch es una app para descargar vídeo y audio desde cualquier lugar, con un núcleo potente basado en librerias de Pyhton. Gratis, sin anuncios y sin límites.</p>
-              <p class="project-impact"><span>IMPACTO</span> [Añade un resultado medible o aprendizaje.]</p>
-              <div class="project-bottom">
-                <ul class="tag-list" aria-label="Tecnologías utilizadas">
+            <div class="proyecto-info">
+              <div class="linea-titulo-proyecto"><h3>Stitch - Descargador de multimedia. (Versión Beta)</h3><span class="numero-proyecto mono">04</span></div>
+              <p>Stitch es una app para descargar vídeo y audio desde cualquier lugar, con un núcleo potente basado en librerías de Python. Gratis, sin anuncios y sin límites.</p>
+              
+              <!--
+                <p class="impacto-proyecto"><span>IMPACTO</span> [Añade un resultado medible o aprendizaje.]</p>
+              -->
+              <div class="proyecto-pie">
+                <ul class="lista-etiquetas" aria-label="Tecnologías utilizadas">
                     <li>PYTHON</li>
                     <li>ffmpeg lib</li>
                     <li>CustomTkinter lib</li>
                 </ul>
-                <div class="project-links"><a href="#proyecto-3" aria-label="Añadir enlace a la demo del proyecto 3">Demo <span>↗</span></a><a href="#proyecto-3" aria-label="Añadir enlace al código del proyecto 3">Código <span>↗</span></a></div>
+                <div class="enlaces-proyecto">
+                  <a href="#proyecto-4" aria-label="Enlace a la demo del proyecto 4">Visitar <span>↗</span></a>
+                  <a href="#proyecto-4" aria-label="Enlace al código del proyecto 4">Código <span>↗</span></a>
+                </div>
               </div>
             </div>
           </article>
+
         </div>
       </section>
 
-      <section class="about section page-width" id="sobre-mi" aria-labelledby="about-title">
-        <div class="about-label">
-          <p class="eyebrow">02 / UN POCO SOBRE MÍ</p>
-          <span class="about-symbol" aria-hidden="true">{ }</span>
+      <!-- SOBRE MÍ -->
+      <section class="sobre-mi seccion ancho-pagina" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+        <div class="sobre-mi-etiqueta">
+          <p class="etiqueta-superior">UN POCO SOBRE MÍ</p>
+          <span class="sobre-mi-simbolo" aria-hidden="true">{ }</span>
         </div>
-        <div class="about-copy">
-          <h2 id="about-title">Código con intención.<br><span class="muted-heading">Soluciones que importan.</span></h2>
-          <p>[Escribe aquí una presentación breve: qué te motiva, cómo trabajas y qué oportunidad estás buscando. Mantén este espacio en 2–3 frases.]</p>
-          <a class="text-link" href="#contacto">Conóceme mejor <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-
-      <section class="stack section page-width" id="stack" aria-labelledby="stack-title">
-        <div class="section-heading stack-heading">
-          <div>
-            <p class="eyebrow">03 / HERRAMIENTAS DE TRABAJO</p>
-            <h2 id="stack-title">Stack técnico<span class="period">.</span></h2>
+        <div class="sobre-mi-contenido">
+          <div class="sobre-mi-foto-caja">
+            <!-- COMENTARIO: Sustituye esta ruta por una foto pequeña opcional para la sección de biografía -->
+            <img src="css/icon/logo.png" alt="Foto de biografía pequeña" class="foto-biografia-pequena">
           </div>
-          <p class="section-note">Herramientas, lenguajes y frameworks que domino.</p>
+          <div>
+            <h2 id="sobre-mi-titulo">Código con intención.<br><span class="titulo-atenuado">Soluciones que importan.</span></h2>
+            <p>Cada desarrollo más que un propósio debe ser una experiencia que combine funcionalidad y estética de manera armoniosa.</p>
+            <ul class="lista-cualidades">
+              <li>Resolutivo</li>
+              <li>Minimalista y moderno</li>
+              <li>Aprendizaje constante</li>
+              <li>Full atención</li>
+              </li>
+            </ul>
+            <a class="enlace-texto" href="#contacto">Conóceme mejor <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="stack-groups">
-            <div class="stack-group"><span class="stack-category mono">LENGUAJES</span>
-                <ul class="stack-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
+      </section>
+
+      <!-- STACK TÉCNICO -->
+      <section class="stack seccion ancho-pagina" id="stack" aria-labelledby="stack-titulo">
+        <div class="cabecera-seccion stack-cabecera">
+          <div>
+            <p class="etiqueta-superior">HERRAMIENTAS DE TRABAJO</p>
+            <h2 id="stack-titulo">Stack técnico<span class="punto">.</span></h2>
+          </div>
+          <p class="nota-seccion">Lenguajes, herramientas y frameworks que domino.</p>
+        </div>
+        <div class="grupos-stack">
+            <div class="grupo-stack"><span class="categoria-stack mono">LENGUAJES</span>
+                <ul class="lista-stack">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
                     <li>JAVASCRIPT</li>
                     <li>PYTHON</li>
                     <li>C++</li>
                 </ul>
             </div>
-            <div class="stack-group"><span class="stack-category mono">TECNOLOGÍAS</span>
-                <ul class="stack-list">
+            <div class="grupo-stack"><span class="categoria-stack mono">FRAMEWORKS Y LIBRERÍAS</span>
+                <ul class="lista-stack">
                     <li>React.js</li>
-                    <li>Firestore</li>
-                    <li>Firebase Total</li>
+                    <li>Tkinter</li>
                     <li>Node.js</li>
-                    <li>GitHub</li>
+                </ul>
+            </div>
+            <div class="grupo-stack"><span class="categoria-stack mono">HERRAMIENTAS Y PROGRAMAS</span>
+                <ul class="lista-stack">
+                    <li>Visual Studio Code</li>
                     <li>Figma</li>
-                    <li>Librerias de Python</li>
-                    <li>Supabase</li>
+                    <li>GitHub</li>
+                    <li>Firebase</li>
+                    <li>Vercel</li>
                 </ul>
             </div>
         </div>
       </section>
 
-      <section class="contact section page-width" id="contacto" aria-labelledby="contact-title">
-        <p class="eyebrow">04 / SIGUIENTE PASO</p>
-        <h2 id="contact-title">¿Tienes algo en mente para<br><span class="accent-text">construir?</span></h2>
-        <p class="contact-description">Contáctame y llevaré tu idea a lo más alto del mundo digital</p>
-        <a class="button button-primary contact-button" href="mailto:sansinasalas@gmail.com">sansinasalas@gmail.com<span aria-hidden="true">↗</span></a>
-        <div class="contact-socials">
-          <span class="social-placeholder">GitHub · [añadir enlace]</span>
-          <span class="social-placeholder">LinkedIn · [añadir enlace]</span>
-          <span class="contact-hint mono">REEMPLAZA CON TUS ENLACES</span>
+      <!-- CONTACTO -->
+      <section class="contacto seccion ancho-pagina" id="contacto" aria-labelledby="contacto-titulo">
+        <p class="etiqueta-superior">SIGUIENTE PASO</p>
+        <h2 id="contacto-titulo">¿Tienes algo en mente para<br><span class="acento-verde">construir?</span></h2>
+        <p class="descripcion-contacto">Contáctame y llevaré tu idea a lo más alto del mundo digital</p>
+        <a class="boton boton-primario boton-contacto" href="mailto:sansinasalas@gmail.com">Contactar por Email<span aria-hidden="true">↗</span></a>
+        <div class="redes-contacto">
+          <span class="marcador-social">GitHub · 
+            <a href="https://github.com/SamuelS013" target="_blank" rel="noopener noreferrer">
+              Visitar perfil
+            </a>
+          </span>
+          <span class="marcador-social">WhatsApp · 
+            <a href="https://wa.me/+584261351097" target="_blank" rel="noopener noreferrer">
+              Enviar mensaje
+            </a>
+          </span>
         </div>
-        <span class="contact-decoration mono" aria-hidden="true">HABLEMOS</span>
       </section>
     </main>
 
-    <footer class="site-footer page-width">
-      <a class="wordmark" href="#inicio">Samuel S<span>.</span></a>
-      <p>Diseñado y desarrollado por Samuel S.</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-sitio ancho-pagina">
+      <a class="marca" href="#inicio">
+        <img src="css/icon/logo.png" alt="Logo" class="logo-brand">
+      </a>
+      <p>Diseñado y desarrollado por Samuel</p>
       <a href="#inicio">Volver arriba ↑</a>
     </footer>
+    <script src="js/app.js" defer></script>
   </body>
 </html>
