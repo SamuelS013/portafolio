@@ -351,7 +351,7 @@ body {
    PROYECTOS
    ================================---------- */
 .seccion {
-  padding: 5rem 0;
+  padding: 5rem 2rem;
   border-bottom: 1px solid var(--borde-tarjeta);
 }
 
@@ -728,9 +728,19 @@ body {
   border: 1px solid var(--borde-tarjeta);
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--texto-secundario);
   font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.lista-stack .icono-stack {
+  width: 24px;
+  height: 24px;
+  color: var(--verde-principal);
 }
 
 /* ==========================================
@@ -772,6 +782,12 @@ body {
 .marcador-social {
   color: var(--texto-secundario);
   font-size: 0.95rem;
+}
+
+.marcador-social a {
+  color: var(--verde-principal);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .pista-contacto {
@@ -930,9 +946,14 @@ body {
     scroll-padding-top: 5rem;
   }
 
-  .ancho-pagina {
+  main {
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+
+  .ancho-pagina {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .cabecera-sitio {
